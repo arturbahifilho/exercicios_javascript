@@ -7,7 +7,7 @@ var ano = rs.questionInt('Digite o ano do nascimento: ')
 
 var limite = 2002
 
-if(ano >= 2002) {
+if(ano >= limite) {
     console.log('Você poderá votar neste ano.')
 } else {
     console.log('Você não poderá votar neste ano.')
