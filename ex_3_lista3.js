@@ -5,7 +5,6 @@ var numero = rs.questionInt('Digite um numero de 1 ate 100: ')
 
 var impares = 0
 
-
 while(impares < numero && numero <= 100) {
     impares = impares + 1
  
