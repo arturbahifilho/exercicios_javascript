@@ -19,4 +19,5 @@ while(cont < 1000) { //múltiplo de 5
     cont++
 }
 
-console.log(somaDiv5 + somaDiv3)
+console.log(somaDiv5)
+console.log(somaDiv3)
