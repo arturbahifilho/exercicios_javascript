@@ -4,15 +4,22 @@
 var rs = require('readline-sync')
 var n = rs.questionInt('Digite algum numero: ')
 
-var maior =  Math.max(n)
-var menor = Math.min(n)
+var maior =  0
+var menor = n
 
 while(n !== -1) {
     n = rs.questionInt('Digite algum numero: ')
-}if(n == -1) {
-    n == maior
-    console.log(maior)
-    n == menor
-    console.log(menor)
+
+ if(n !== -1){
+    if(n > maior) { //o sinal > identifica o número com maior valor acima de 0
+        maior = n
     
+    } else if(n < menor) { //o sinal < identifica o número com menor valor abaixo de 0
+        menor = n
+    }
 }
+
+}
+
+console.log('O maior numero eh: ' + maior)
+console.log('O menor numero eh: ' + menor)
