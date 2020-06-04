@@ -8,12 +8,12 @@ var graus = rs.questionInt('Digite quantos graus voce deseja converter: ')
 celsius = 0
 fahrenheit = 0
 
-if(opcao == 'f') {
-    celsius = (graus - 32) * (5 / 9)
-    console.log('A temperatura em Celius é: ' + celsius)
-} else if(opcao == 'c') {
-    fahrenheit = (graus * 9 / 5) + 32
-    console.log('A temperatura em Fahrenheit é: ' + fahrenheit)
-} else {
-    console.log('Digite uma opção: c ou f')
+ if(opcao == 'f') {
+    celsius = ((graus - 32) * (5 / 9)).toFixed(2)
+    console.log('A temperatura em Celius eh: ' + celsius)
+}else if(opcao == 'c') {
+    fahrenheit = ((graus * 9 / 5) + 32).toFixed(2)
+    console.log('A temperatura em Fahrenheit eh: ' + fahrenheit)
+} else {   
+        console.log('Digite uma opção: c ou f')
 }
