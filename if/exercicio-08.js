@@ -12,14 +12,14 @@ var ddi = rs.questionInt('Digite o valor do DDI: ')
 
 if(ddi == 1) {
     console.log('Estados Unidos')
-} else if(ddi == 49) {
+}else if(ddi == 49) {
     console.log('Alemanha')
-} else if(ddi == 54) {
+}else if(ddi == 54) {
     console.log('Argentina')
-} else if (ddi == 55) { 
+}else if (ddi == 55) { 
     console.log('Brasil')
-} else if(ddi == 35) {
+}else if(ddi == 35) {
     console.log('Portugal')
-} else {
+}else{
     console.log('DDI inexistente')
 }
