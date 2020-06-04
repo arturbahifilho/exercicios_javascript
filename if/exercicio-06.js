@@ -6,12 +6,12 @@
 //d. N moedas de 10 centavos;
 //e. N moedas de 5 centavos;
 //f. N moedas de 1 centavos.
-
 //O programa deverá verificar se o total de reais que contém no cofrinho é o
 //bastante para compra o produto X e imprimir se possui ou não valor suficiente
 
 var rs = require('readline-sync')
 var precoProduto = rs.questionInt('Digite o preco do produto: ')
+
 var n1 = rs.questionInt('Digite o numero de moedas de 1 real: ')
 var n2 = rs.questionInt('Digite o numero de moedas de 50 centavos: ')
 var n3 = rs.questionInt('Digite o numero de moedas de 25 centavos: ')
