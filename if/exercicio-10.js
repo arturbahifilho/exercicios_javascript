@@ -6,11 +6,10 @@
 var rs = require('readline-sync')
 var quantidadeKw = rs.questionInt('Digite a quantidade de Kw da residencia: ')
 
-
 salarioMinimo = 1045
 valorCadaKw = (((1 / 7) * salarioMinimo) / 100).toFixed(2)
 console.log('valor em reais de cada kw: ' + valorCadaKw)
 novoValorCadaKw = ((((1 / 7) * salarioMinimo) / 100) * (1 - 10 /100)).toFixed(2)
 console.log('valor em reais de cada kw com desconto de 10%: ' + novoValorCadaKw)
 valorParaSerPago = (((((1 / 7) * salarioMinimo) / 100) * (1 - 10 /100)) * quantidadeKw).toFixed(2)
-console.log('O novo valor a ser pago pela residencia eh: ' + valorParaSerPago)
+console.log('O novo valor a ser pago pela residencia é: ' + valorParaSerPago)
