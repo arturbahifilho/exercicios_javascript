@@ -11,8 +11,8 @@ var prestacao = rs.questionInt('Digite o numero de prestacoes: ')
 
 valorPrestacao = (emprestimo / prestacao)
 
-if(valorPrestacao > (30 / 100) * salario) {
-    console.log('O empréstimo não pode ser concedido')
-} else {
-    console.log('O empréstimo pode ser concedido')
+if(valorPrestacao > (30 / 100) * salario){
+    console.log('O empréstimo não pode ser concedido.')
+}else{
+    console.log('O empréstimo pode ser concedido.')
 }
