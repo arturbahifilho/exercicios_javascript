@@ -9,8 +9,8 @@ var totalCompra = 0
 
 if(maca < 12) {
     totalCompra = 0.30 * maca
-} else if(maca >= 12) {
+} else {
     totalCompra = 0.25 * maca
 }
 
-console.log(totalCompra)
+console.log('O valor total da compra eh: R$ ' + totalCompra)
