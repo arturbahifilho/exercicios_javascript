@@ -6,7 +6,6 @@ var n1 = rs.questionInt('Digite o primeiro valor: ')
 var n2 = rs.questionInt('Digite o segundo valor: ')
 var n3 = rs.questionInt('Digite o terceiro valor: ')
 
-
 var numeroMeio = 0
 var numeroMaior = 0
 var numeroMenor = 0
@@ -19,7 +18,6 @@ if(n1 < n2 && n1 < n3 ){
     } else {
         numeroMeio = n2
         numeroMaior = n3
-
     }
 
 } else if(n2 < n1 && n2 < n3) {
