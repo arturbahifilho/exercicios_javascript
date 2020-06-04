@@ -7,7 +7,7 @@
 
 var rs = require('readline-sync')
 var senha = rs.questionInt('Digite uma senha: ')
-console.log(senha)
+
 
 if(senha == 1234) {
     console.log('ACESSO PERMITIDO')
