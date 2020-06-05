@@ -17,13 +17,13 @@ numeroB = []
 iguais = []
 
 for (var i = 0; i < 5; i++) {
-    numeroA[i] = rs.questionInt(jogador1 + ' Digite um numero de 1 a 10: ') //número que vai entrar no array
-
+    var num1 = rs.questionInt(jogador1 + ' Digite um numero de 1 a 10: ') //número que vai entrar no array
+    numeroA.push(num1)
 }
 
 for (var k = 0; k < 5; k++) {
-    numeroB[k] = rs.questionInt(jogador2 + ' Digite um numero de 1 a 10: ') //número que vai entrar no array
-
+    var num2 = rs.questionInt(jogador2 + ' Digite um numero de 1 a 10: ') //número que vai entrar no array
+    numeroB.push(num2)
 }
 console.log(jogador1 + ': ' + numeroA)
 console.log(jogador2 + ': ' + numeroB)
