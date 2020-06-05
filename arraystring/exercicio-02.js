@@ -10,22 +10,30 @@
 
 var rs = require('readline-sync')
 var jogador1, jogador2, numeroA, numeroB, iguais
- jogador1 = rs.question('Digite o nome do primeiro jogador: ')
- jogador2 = rs.question('Digite o nome do segundo jogador: ')
- num1 = []
- num2 = []
- iguais = []
+jogador1 = rs.question('Digite o nome do primeiro jogador: ')
+jogador2 = rs.question('Digite o nome do segundo jogador: ')
+numeroA = []
+numeroB = []
+iguais = []
 
-for(var i = 0; i < 5 ; i++){
-    numeroA = rs.questionInt(jogador1 + ' Digite um numero de 1 a 10: ') //número que vai entrar no array
-    num1.push(numeroA)
-} 
-
-for(var k = 0; k < 5; k++) {
-    numeroB = rs.questionInt(jogador2 + ' Digite um numero de 1 a 10: ') //número que vai entrar no array
-    num2.push(numeroB)
+for (var i = 0; i < 5; i++) {
+    numeroA[i] = rs.questionInt(jogador1 + ' Digite um numero de 1 a 10: ') //número que vai entrar no array
 
 }
-console.log('Jogador A: ' + numeroA)
-console.log('Jogador B: ' + numeroB)
+
+for (var k = 0; k < 5; k++) {
+    numeroB[k] = rs.questionInt(jogador2 + ' Digite um numero de 1 a 10: ') //número que vai entrar no array
+
+}
+console.log(jogador1 + ': ' + numeroA)
+console.log(jogador2 + ': ' + numeroB)
+
+for (var l = 0; l < numeroB.length; l++) {
+    for (var j = 0; j < numeroA.length; j++) {
+        if (numeroA[j] == numeroB[l]) {
+            iguais.push(numeroA[j])
+        }
+    }
+}
+console.log(iguais)
 
