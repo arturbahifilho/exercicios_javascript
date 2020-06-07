@@ -3,7 +3,7 @@
 // Utilize o método replace()
 
 var rs = require('readline-sync')
-var frase = rs.question('Digite uma frase com a palavra "antilope": ')
+var frase = rs.question('Digite uma frase com a palavra "ANTILOPE": ')
 
 
 console.log(frase.replace('ANTILOPE','Kobus ellipsiprymnus'))
