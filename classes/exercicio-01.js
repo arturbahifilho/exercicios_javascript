@@ -17,7 +17,7 @@ constructor(nome, modelo, cor){
     this.modelo = modelo
     this.cor = cor
 }
-} //fechamnto classe
+} //fechamento classe
 
 function criarCarro() {
     var nome = rs.question('Digite o nome do carro: ')
