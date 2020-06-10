@@ -4,15 +4,15 @@
 // métodos da biblioteca ‘fs’ para salvar o arquivo.
 // Salve o json como ‘carro.json’
 
-var rs = require('readline-sync')
-var fs = require('fs')
+// var rs = require('readline-sync')
+// var fs = require('fs')
 
-var carro = {}
-carro.cor = rs.question('Digite uma cor: ')
-carro.modelo = rs.question('Digite um modelo: ')
-carro.marca = rs.question('Digite uma marca: ')
+// var carro = {}
+// carro.cor = rs.question('Digite uma cor: ')
+// carro.modelo = rs.question('Digite um modelo: ')
+// carro.marca = rs.question('Digite uma marca: ')
 
-carroSerializado = JSON.stringify(carro)
-fs.writeFileSync('carro.json', carroSerializado)
+// carroSerializado = JSON.stringify(carro)
+// fs.writeFileSync('carro.json', carroSerializado)
 
-console.log(carro)
+// console.log(carro)
