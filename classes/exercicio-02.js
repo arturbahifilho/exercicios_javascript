@@ -16,34 +16,40 @@ class Aluno {
     }
 }
 
-function cadastrarAluno() {
+function cadastrarAluno() { 
     var nome = rs.question('Digite o nome: ')
     var idade = rs.questionInt('Digite a idade: ')
     return new Aluno(nome, idade)
 }
 
-var aluno1 = cadastrarAluno()
-var aluno2 = cadastrarAluno()
-var aluno3 = cadastrarAluno()
+var alunos = []
+for(var i = 0; i < 3 ; i++) {
+    var aluno = cadastrarAluno()  //repetir 3 vezes a função cadastrar aluno
+    alunos.push(aluno)
+}
+console.log(alunos)
 
-function maiorIdade(alunoA, alunoB, alunoC){
-    var idadeMaiorA = alunoA.idade > alunoB.idade && alunoA.idade > alunoC.idade && alunoA.idade > 18
-    var idadeMaiorB = alunoB.idade > alunoA.idade && alunoB.idade > alunoC.idade && alunoB.idade > 18
-    var idadeMaiorC = alunoC.idade > alunoA.idade && alunoC.idade > alunoB.idade && alunoC.idade > 18
-    
 
-    if(idadeMaiorA) {
-        return 'O aluno ' + alunoA.nome + ' eh maior de idade e possui mais de 18 anos!'
-    } else if(idadeMaiorB) {
-        return 'O aluno ' + alunoB.nome + ' eh maior de idade e possui mais de 18 anos!'
-    } else if(idadeMaiorC) {
-        return 'O aluno ' + alunoC.nome + ' eh maior de idade e possui mais de 18 anos!'
-    } else {
-        return 'Nenhum aluno eh maior de idade!'
-    }
+function maiorIdadeAlunos(alunos) {
+     var nomesDosAlunos = [] //criar um array para armazenar e retornar apenas o nome do aluno
+     var maiorIdadeEncontrada = 0
 
+     for(var k = 0; k < alunos.length ; k++){
+        if(alunos[k].idade > maiorIdadeEncontrada) {
+            maiorIdadeEncontrada = alunos[k].idade
+        }
+     }
+     for(var j = 0; j < alunos.length ; j++) {
+         if(alunos[j].idade == maiorIdadeEncontrada && alunos[j].idade >= 18) { //comparação
+            nomesDosAlunos.push(alunos[j].nome)
+            return nomesDosAlunos  //retornar os nomes que estão dentro do array que satisfaçam a condição
+         } else {
+            return 'Ninguem eh maior de idade!'
+         }
+     }
 }
 
-var maiorIdadeAlunos = maiorIdade(aluno1, aluno2, aluno3)
+var maioresDeIdade = maiorIdadeAlunos(alunos)
 
-console.log(maiorIdadeAlunos)
+console.log(maioresDeIdade)
+
