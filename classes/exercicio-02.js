@@ -42,14 +42,11 @@ function maiorIdadeAlunos(alunos) {
      for(var j = 0; j < alunos.length ; j++) {
          if(alunos[j].idade == maiorIdadeEncontrada && alunos[j].idade >= 18) { //comparação
             nomesDosAlunos.push(alunos[j].nome)
-            return nomesDosAlunos  //retornar os nomes que estão dentro do array que satisfaçam a condição
-         } else {
-            return 'Ninguem eh maior de idade!'
          }
      }
+     return nomesDosAlunos  //retornar os nomes que estão dentro do array que satisfaçam a condição
 }
 
 var maioresDeIdade = maiorIdadeAlunos(alunos)
 
 console.log(maioresDeIdade)
-
