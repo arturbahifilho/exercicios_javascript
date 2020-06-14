@@ -40,13 +40,38 @@ function maiorIdadeAlunos(alunos) {
         }
      }
      for(var j = 0; j < alunos.length ; j++) {
-         if(alunos[j].idade == maiorIdadeEncontrada && alunos[j].idade >= 18) { //comparação
+         if(alunos[j].idade == maiorIdadeEncontrada) { //comparação
             nomesDosAlunos.push(alunos[j].nome)
          }
      }
      return nomesDosAlunos  //retornar os nomes que estão dentro do array que satisfaçam a condição
 }
 
-var maioresDeIdade = maiorIdadeAlunos(alunos)
+function maioresDe18Anos(alunos) {
+    var nomesDos18 = []
+    for(var i =0; i < alunos.length; i++) {
+        if(alunos[i].idade >= 18){
+            nomesDos18.push(alunos[i].nome)
+        } 
+    }
+    return nomesDos18
+}
 
-console.log(maioresDeIdade)
+function calculaMediaIdadeAluno(alunos) {
+    var somaIdade = 0
+    for(var i = 0; i < alunos.length; i++) {
+    somaIdade = somaIdade + alunos[i].idade
+    }
+    var mediaAlunos = (somaIdade / alunos.length).toFixed(2)
+    return mediaAlunos
+    }
+
+
+var mediaMaioresIdade = calculaMediaIdadeAluno(alunos)
+console.log('A media das idades eh: ' + mediaMaioresIdade)
+
+var maioresDeIdade = maiorIdadeAlunos(alunos)
+console.log(maioresDeIdade + ' eh o(a) aluno(a) de maior de idade')
+
+var nomesDosMaioresDeIdade = maioresDe18Anos(alunos)
+console.log(nomesDosMaioresDeIdade)
