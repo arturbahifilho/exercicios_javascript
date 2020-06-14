@@ -16,7 +16,7 @@ var rs = require('readline-sync')
 var data = rs.question('Digite uma data no formato 00/00/0000: ')
 
 var dia = data.match(/(\d\d)/)
-console.log('Dia: ' + dia[0])
+console.log('Dia: ' + dia[0]) //pegar o dia apenas 1 vez
 data = data.substring(dia['index'] + 3)
 
 var mes = data.match(/(\d\d)/)
