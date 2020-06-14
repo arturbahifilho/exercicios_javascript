@@ -1,12 +1,3 @@
-// Criar um módulo que calcule a média de uma coleção de números.
-// Para isso crie um arquivo chamado calcula-media.js.
-// No módulo exporte uma função media(arr) que recebe como argumento um array de
-// números.
-// A função deve iterar por esses números e retornar sua média.
-// Após isso no arquivo da atividade importe o módulo criado e solicite ao usuário 3
-// números, utilize o módulo criado para calcular a média e no final imprima o resultado
-// para o usuário.
-
 function calculaMedia(numerosRecebidos) { //[5,7,3,9,10]
 
     var soma = 0
@@ -17,4 +8,14 @@ function calculaMedia(numerosRecebidos) { //[5,7,3,9,10]
     return media
     }
     
+function calculaMediaIdadeAluno(alunos) {
+    var somaIdade = 0
+    for(var i = 0; i < alunos.length; i++) {
+    somaIdade = somaIdade + alunos[i]
+    }
+    var mediaAlunos = (somaIdade / alunos.length).toFixed(2)
+    return mediaAlunos
+    }
+
     module.exports = calculaMedia; //não precisa chamar a função
+    module.exports = calculaMediaIdadeAluno;
