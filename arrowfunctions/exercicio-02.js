@@ -8,8 +8,24 @@ var rs = require('readline-sync')
 var carros = require('../arrowfunctions/cars.json')
 
 
-var carrosDoJapao = carros.filter(
+// var carrosDoJapao = carros.filter(
 
-    (carro) => carro.Origin == 'Japan')
+//     (carro) => carro.Origin == 'Japan')
 
-    console.log(carrosDoJapao.length + ' carros do Japao')
+//     console.log(carrosDoJapao.length + ' carros do Japao')
+
+function numerosCarrosJapao(carros) {
+    var CarrosDoJapao = carros.filter(
+        function (carro) {
+            if(carro.Origin == 'Japan') {
+                return true
+            } else {
+                return false
+            }
+        }
+    ) //fechamento do filter
+    return  CarrosDoJapao.length + ' carros do Japao'
+}
+
+console.log(numerosCarrosJapao(carros))
+
