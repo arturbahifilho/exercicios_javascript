@@ -31,7 +31,7 @@ function maiorPotencia(carros) {
         function nomePotencia(carros) {
             var nomeMaxima = carros.filter(
                 function (carro) {
-                    if(carro.Horsepower == listaPotencia ) {
+                    if(carro.Horsepower == listaPotencia.join('') ) {
                         nomeDoCarro.push(carro.Car)
                     }
                 }
