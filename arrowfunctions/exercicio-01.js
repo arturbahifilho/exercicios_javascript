@@ -14,3 +14,17 @@ var carrosComHpMinimo = carros.filter(
     
     console.log(carrosComHpMinimo.length + ' carro(s)')
     
+    // function numeroDecarros(minimohp, carros){    
+    //    
+    //    var carrosComHpMinimo=carros.filter(
+    //        function(carro){
+    //            if(carro.Horsepower>=minimohp){
+    //                return true;
+    //            }else{
+    //                return false;
+    //            }
+    //        }
+    //    );
+    //     return carrosComHpMinimo.length;
+    // }
+    // console.log(numeroDecarros(hp,carros))
