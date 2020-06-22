@@ -1,0 +1,30 @@
+<!-- Abra uma caixa de texto pedindo para o usuário inserir a sua idade e, caso essa idade
+seja menor que 18 anos, esse usuário seja redirecionado para a página do Mundo Bita.
+Caso sua idade seja maior que 18 anos, redirecioná-lo para www.pudim.com.br -->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        function idadeUsuario() {
+            var idade = document.querySelector('input')
+            
+                        if (idade.valueAsNumber < 18) {
+                            window.location = "https://www.mundobita.com.br/";
+                        }
+                        else {
+                            window.location = "http://www.pudim.com.br/";
+                        }
+                    }
+            
+        
+    </script>
+    
+    <input type="number">
+    <button onclick="idadeUsuario()">Digite a sua idade</button>
+    
+    
+</body>
+</html>
