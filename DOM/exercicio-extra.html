@@ -1,0 +1,28 @@
+<!--
+(OBRIGATÓRIO) Crie  uma  página  HTML  com  um  cabeçalho  h1  e  um  botão.  Ao  clicar  no  botão, 
+ altere  o  texto  do cabeçalho para “A mágica continua!”.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset= "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercícios extra DOM</title>
+
+</head>
+<body>
+    <h1 id="cabecalho">Header Bolado</h1>
+   
+    <button onclick="mudaParagrafoPeloId('cabecalho','A mágica continua!')">MUDA H1</button>
+   
+    <script>
+
+        function mudaParagrafoPeloId(id, texto) {
+            let elem = document.getElementById(id) //referência ao cabeçalho
+            elem.innerHTML = texto
+        }
+
+    </script>
+</body>
+
+</html>
