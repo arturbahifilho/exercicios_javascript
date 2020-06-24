@@ -19,6 +19,7 @@ var filtro = rs.question('Digite o nome ou numero de um pokemon: ')
 
 axios.get(`${url}/pokemon/${filtro}`)
     .then((resposta) => {
+        
         const pokemon = resposta.data
         console.log('Nome: ', pokemon.name)
 
@@ -36,9 +37,11 @@ axios.get(`${url}/pokemon/${filtro}`)
         })
         console.log('Habilidade: ', nomeDasHabilidades)
 
+    pokemonSerializado = JSON.stringify(pokemon)
+    fs.writeFileSync('pokemons.json', pokemonSerializado)
+
     }).catch((error) => {
         console.log(error)
     })
 
-    pokemonSerializado = JSON.stringify(filtro)
-    fs.writeFileSync('filtro.json', pokemonSerializado)
+    
