@@ -84,6 +84,54 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/${filtro}`)
         })
 })
 
+var pokemonsSalvos = fs.readFileSync('Desafios/Pokeapi/pokemons.json')
+    var pokemons = JSON.parse(pokemonsSalvos)
+    // var pokemonSerializado = JSON.stringify(pokemons)
+    // fs.writeFileSync('Desafios/Pokedex/pokemons.json', pokemonSerializado)
+    pokemons.forEach((pokemon) => {
+    pokemon.tipo.forEach((tipo) => {
+        axios.get(`https://pokeapi.co/api/v2/type/${tipo}`)
+        .then((respo) => {
+            let dadosTipo = respo.data
+            var infoDano = {dobroDoDano: [], metadeDoDano: [], nenhumDano: []}
+            var infoDano2 = {}
+            var infoDano3 = {}
+            var danosPokemon = []
+            var danosPokemon2 = []
+            var danosPokemon3 = []
+                for(var i = 0; i < dadosTipo.damage_relations.double_damage_to.length; i++){
+                    infoDano.dobroDoDano = dadosTipo.damage_relations.double_damage_to[i]
+                    danosPokemon.push(infoDano.dobroDoDano)
+                    
+                }
+                for(var j = 0; j < dadosTipo.damage_relations.half_damage_to.length; j++){
+                    infoDano.metadeDoDano = dadosTipo.damage_relations.half_damage_to[j]
+                    danosPokemon2.push(infoDano.metadeDoDano)
+                    // infoDano.nenhumDano = dadosTipo.damage_relations.no_damage_to[i]
+                }
+                for(var k = 0; k < dadosTipo.damage_relations.no_damage_to.length; k++){
+                    infoDano.nenhumDano = dadosTipo.damage_relations.no_damage_to[k]
+                    danosPokemon3.push(infoDano.nenhumDano)
+                //     // infoDano.nenhumDano = dadosTipo.damage_relations.no_damage_to[i]
+                }
+               
+                console.log('Dobro do dano: ', danosPokemon)
+                console.log('Metade do dano: ', danosPokemon2)
+                console.log('Nenhum dano: ', danosPokemon3)
+                
+                
+            //     dadosHab.effect_entries.forEach((element) => {
+            //     infoHabilidade.efeito.push(element.effect)
+            //     habilidade.push(infoHabilidade)
+            //     console.log(habilidade)
+        
+            // })
+        }).catch((error) => {
+            console.log(error)
+        })
+        })
+})
+
 
     
 // } //fechamento função
