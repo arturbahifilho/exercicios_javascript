@@ -1,0 +1,70 @@
+@font-face{
+    font-family: "Pokemon Classic";
+    src: url(./font/Pokemon\ Classic.ttf)
+}
+/* body{
+    background-image: url(./img/420248.jpg);
+    background-position: bottom;
+    letter-spacing: 1px;
+  
+    font-family: 'Balsamiq Sans', cursive;
+} */
+
+body {
+    background: rgb(22, 1, 97);
+    font: normal 18pt Arial;
+}
+h6{
+    line-height: 1em
+}
+.laranja{
+    background-color: rgb(0, 0, 0);
+    border-radius: 1em;
+    padding-left: 3%;
+}
+.nav-wrapper {
+    border-radius: 1em;
+    padding-bottom: 3%;
+    padding-left: 3%;
+}
+
+nav{
+    border-radius: 1em;
+    margin-top: 2%;
+}
+.label{
+    padding: 2%;
+    box-sizing: border-box;
+    font-size: 2em;
+}
+.img-pokemons{
+    border-radius: 1em;
+}
+.cor-pesquisa{
+    background-color: rgb(255, 255, 255)
+}
+input{
+    border-radius: 2em;
+    background-color: rgb(1, 255, 56);
+}
+
+#descricao{
+    color: rgb(0, 0, 0);
+}
+
+.nomePokemon{
+    font-family: "Pokemon Classic";
+}
+.img-pokemons{
+    font-family: 'Changa', sans-serif;
+    
+}
+
+li{
+    padding-top: 5px;
+}
+
+
+footer p {
+    color:rgb(0, 0, 0)
+}
