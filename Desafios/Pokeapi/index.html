@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="UTF-8">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500;700&family=Montserrat+Alternates:wght@100&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="style.css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169189647-1"></script>
+
+<title>Pokeapi</title>
+
+</head>
+<body>
+    <div class="container">
+          
+        <img src="img/pokemon_go_logo.png" width="1000" height=" 300">
+      
+      </div>
+
+    
+    <div class="container">
+        <div class="section laranja">
+
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="icon-block">
+                        <nav>
+                            <div class="nav-wrapper white darken-2 ">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s9">
+                                                <input type="text" title="Insira um número ou nome para pesquisa" id="pesquisaPokemon"
+                                                    class="autocomplete black-text">
+                                                <label class="black-text" for="pesquisaPokemon">Digite nome ou ID do Pokemon!</label>
+                                            </div>
+                                            <a class="waves-effect black darken-4 btn-small white-text"
+                                                id="btnPesquisaPokemon" onclick="dadosParaPesquisa()">Ok</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </nav>
+
+                        <h4 id="nomePokemon" class="center nomePokemon white-text"></h4>
+                        <br>
+                        <ul class="descricaoPokemon white-text">
+                            <li class="light">Type: <span id="tipo" class="yellow-text"> ? </span></li>
+                            <li class="light">Ability: <span id="habilidade" class="yellow-text"> ? </span></li>
+                            <li class="light">Double Damage From: <span id="danosDF" class="yellow-text"> ? </span></li>
+                            <li class="light">Double Damage To: <span id="danosDT" class="yellow-text"> ? </span></li>
+                            <li class="light">Half Damage From: <span  id="danosHF" class="yellow-text"> ? </span></li>
+                            <li class="light">Half Damage To: <span id="danosHT" class="yellow-text"> ? </span></li>
+                            <li class="light">No Damage From: <span id="noDanosF" class="yellow-text"> ? </span></li>
+                            <li class="light">No Damage To: <span id="noDanosT" class="yellow-text"> ? </span></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col s12 m6">
+                    <div class="icon-block">
+                        <div class="row">
+                            <div class="col s11 m11">
+                                <div class="card img-pokemons">
+                                    <div class="card-image">
+                                        <img id="pokemonImg"  width="650" src="./img/pokebola1.png" style="border-radius: 1em;">
+                                        <span id="pokeId" class="card-title black-text"></span>
+                                       
+                                    </div>
+                                    <div class="card-content" id="descricao">
+                                        <p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="page-footer yellow darken-6">
+        <div class="footer-copyright">
+            <div class="row">
+                <p> Copyright © 2020 Artur Bahi Filho</p>
+            </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../../dist/js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
