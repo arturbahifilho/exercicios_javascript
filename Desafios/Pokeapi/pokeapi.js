@@ -26,6 +26,7 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/${filtro}`)
     console.log(pokemons)
 
     var pergunta = rs.question('Voce deseja salvar o pokemon? Sim / Nao: ')
+        
         if(pergunta == 'Sim' || pergunta == 'sim' || pergunta == 's'){
             var pokemonsSalvos = fs.readFileSync('Desafios/Pokeapi/pokemons.json')
             pokemons = JSON.parse(pokemonsSalvos)
@@ -33,11 +34,26 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/${filtro}`)
             var pokemonSerializado = JSON.stringify(pokemons)
             fs.writeFileSync('Desafios/Pokeapi/pokemons.json', pokemonSerializado)
             console.log('Pokemon salvo!')
-        } else if(pergunta == 'Nao' || pergunta == 'nao' || pergunta == 'n') {
+        }else if(pergunta == 'Nao' || pergunta == 'nao' || pergunta == 'n') {
             console.log('Tudo bem!')
         } else {
-            console.log('Digite apenas Sim ou Nao')
-        }
+         while(pergunta != 'Sim' || pergunta != 'sim' || pergunta != 's' || pergunta != 'Nao' || pergunta != 'nao' || pergunta != 'n'){
+                var pergunta = rs.question('Digite apenas: Sim / Nao: ')
+                if(pergunta == 'Sim' || pergunta == 'sim' || pergunta == 's'){
+                    var pokemonsSalvos = fs.readFileSync('Desafios/Pokeapi/pokemons.json')
+                    pokemons = JSON.parse(pokemonsSalvos)
+                    pokemons.push(infoPokemon)
+                    var pokemonSerializado = JSON.stringify(pokemons)
+                    fs.writeFileSync('Desafios/Pokeapi/pokemons.json', pokemonSerializado)
+                    console.log('Pokemon salvo!')
+                    break;
+                }else if(pergunta == 'Nao' || pergunta == 'nao' || pergunta == 'n') {
+                    console.log('Tudo bem!')
+                    break;
+                }
+         }
+    }
+           
     
 
     }).catch((error) => {
