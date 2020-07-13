@@ -1,4 +1,4 @@
-//imprimir o tamanho de cada nome
+//imprimir o tamanho de cada nome inserido no array
 
 const nomes = [
     "Ana",
